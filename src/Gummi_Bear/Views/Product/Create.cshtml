@@ -1,4 +1,24 @@
-﻿@{
+﻿@model Gummi_Bear.Model.Product
+
+@{
     ViewData["Title"] = "Add Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header">
+    <h2>Add Product</h2>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Cost)
+    @Html.TextBoxFor(model => model.Cost)
+
+    @Html.LabelFor(model => model.CountryOfOrigin)
+    @Html.TextBoxFor(model => model.CountryOfOrigin)
+
+    <input type="submit" value="Add new product" />
 }
