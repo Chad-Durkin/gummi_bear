@@ -7,6 +7,7 @@
 ## Description
 
 _A website displaying a company's product, and that products details in displayed fashion_
+_Designed after the website https://wanelo.com/_
 
 ## Setup/Installation Requirements
 
