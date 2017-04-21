@@ -15,17 +15,17 @@
             <h2><strong>Our Current Products</strong></h2>
         </div>
         <div class="panel-body">
-            <ul>
                 @foreach (var listProduct in Model)
                 {
-                    <h4>Product: @Html.DisplayFor(modelName => listProduct.Name)</h4>
-                    <ul>
-                        <li><em>Cost: @Html.DisplayFor(modelCost => listProduct.Cost)</em></li>
-                        <li><em>Country Of Origin: @Html.DisplayFor(modelOrigin => listProduct.CountryOfOrigin)</em></li>
-                        <li>@Html.ActionLink("Edit", "Edit", new { id = listProduct.ProductId }) | @Html.ActionLink("Delete", "Delete", new { id = listProduct.ProductId })</li>
-                    </ul>
+                    <div class="productBox">
+                        <h4>Product: @Html.DisplayFor(modelName => listProduct.Name)</h4>
+                        <ul>
+                            <li><em>Cost: @Html.DisplayFor(modelCost => listProduct.Cost)</em></li>
+                            <li><em>Country Of Origin: @Html.DisplayFor(modelOrigin => listProduct.CountryOfOrigin)</em></li>
+                            <li>@Html.ActionLink("Edit", "Edit", new { id = listProduct.ProductId }) | @Html.ActionLink("Delete", "Delete", new { id = listProduct.ProductId })</li>
+                        </ul>
+                    </div>
                 }
-            </ul>
         </div>
     </div>
 }
