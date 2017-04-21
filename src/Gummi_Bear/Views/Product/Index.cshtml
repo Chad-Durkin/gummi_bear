@@ -22,6 +22,7 @@
                     <ul>
                         <li><em>Cost: @Html.DisplayFor(modelCost => listProduct.Cost)</em></li>
                         <li><em>Country Of Origin: @Html.DisplayFor(modelOrigin => listProduct.CountryOfOrigin)</em></li>
+                        <li>@Html.ActionLink("Edit", "Edit", new { id = listProduct.ProductId })</li>
                     </ul>
                 }
             </ul>
