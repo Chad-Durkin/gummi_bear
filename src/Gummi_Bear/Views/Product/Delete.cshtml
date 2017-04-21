@@ -1,4 +1,16 @@
-﻿@{
+﻿@model Gummi_Bear.Model.Product
+
+@{
     ViewData["Title"] = "Delete Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Product Page</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ProductId)
+
+    <h4>Are you sure you want to delete the <strong>@Html.DisplayFor(model => model.Name)</strong> product?</h4>
+    <input type="submit" value="Delete Product" />
 }
