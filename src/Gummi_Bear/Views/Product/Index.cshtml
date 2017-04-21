@@ -1,4 +1,30 @@
-﻿@{
+﻿@model IEnumerable<Gummi_Bear.Model.Product>
+
+@{
     ViewData["Title"] = "View Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <h2><strong>Gummi Kingdom Products</strong></h2>
+</div>
+
+@if (Model.Any())
+{
+    <div class="panel panel-succes">
+        <div class="panel-heading">
+            <h2><strong>Our Current Products</strong></h2>
+        </div>
+        <div class="panel-body">
+            <ul>
+                @foreach (var listProduct in Model)
+                {
+                    <h4>Product: @Html.DisplayFor(modelName => listProduct.Name)</h4>
+                    <ul>
+                        <li><em>Cost: @Html.DisplayFor(modelCost => listProduct.Cost)</em></li>
+                        <li><em>Country Of Origin: @Html.DisplayFor(modelOrigin => listProduct.CountryOfOrigin)</em></li>
+                    </ul>
+                }
+            </ul>
+        </div>
+    </div>
 }
