@@ -1,4 +1,24 @@
-﻿@{
+﻿@model Gummi_Bear.Model.Product
+
+@{
     ViewData["Title"] = "Edit Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product Edit Page</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ProductId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.HiddenFor(model => model.Cost)
+    @Html.TextBoxFor(model => model.Cost)
+
+    @Html.HiddenFor(model => model.CountryOfOrigin)
+    @Html.HiddenFor(model => model.CountryOfOrigin)
+
+    <input type="submit" value="Edit Product" />
 }
