@@ -14,11 +14,11 @@
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
 
-    @Html.HiddenFor(model => model.Cost)
+    @Html.LabelFor(model => model.Cost)
     @Html.TextBoxFor(model => model.Cost)
 
-    @Html.HiddenFor(model => model.CountryOfOrigin)
-    @Html.HiddenFor(model => model.CountryOfOrigin)
+    @Html.LabelFor(model => model.CountryOfOrigin)
+    @Html.TextBoxFor(model => model.CountryOfOrigin)
 
     <input type="submit" value="Edit Product" />
 }
